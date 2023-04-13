@@ -1,3 +1,3 @@
-export const env = {
-api : ""
+export const data = {
+api : "https://deployment-for-users.onrender.com"
 }

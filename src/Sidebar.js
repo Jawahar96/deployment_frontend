@@ -33,7 +33,7 @@ const Sidebar = () => {
 
     <Link className="nav-link" to="/user">
         <i className="fas fa-fw fa-tachometer-alt"></i>
-        <span>Users</span>
+        <span>User</span>
         </Link>
 </li>
 

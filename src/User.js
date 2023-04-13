@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { data } from './config'
 
 function User() {
     const [users,setUsers]=useState([])
@@ -13,9 +14,7 @@ useEffect(()=>{
 
 let loadData=async()=>{
     setLoading(true)
-let users= await axios.get(
-    'https://641c669b1a68dc9e4608a87e.mockapi.io/user'
-    );
+let users= await axios.get(`${data.api}/user` );
     setUsers(users.data)
     setLoading(false)
 }
@@ -24,7 +23,7 @@ let userDelete=async (id)=>{
     try{
         let ask=window.confirm("Are you sure you want delete it");
         if(ask){
-            await axios.delete(`https://641c669b1a68dc9e4608a87e.mockapi.io/user/${id}`)
+            await axios.delete(`${data.api}/user/${id}`)
             
             loadData()
 

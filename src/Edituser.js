@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import {formik,useFormik} from 'formik';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import { data } from './config';
 
 function Edituser() {
   const params=useParams()
@@ -32,8 +33,8 @@ function Edituser() {
 
     },
     onSubmit : async (values)=>{
-      let users=await axios.put(`https://641c669b1a68dc9e4608a87e.mockapi.io/users/${params.id}`,values);
- navigate('/users/')
+      let users=await axios.put(`${data.api}/user/${params.id}`,values);
+ navigate('/user')
       console.log(values);
 
     }
@@ -46,7 +47,7 @@ function Edituser() {
 
   let loadUser=async()=>{
     try{
-      let user=await axios.get(`https://641c669b1a68dc9e4608a87e.mockapi.io/users/${params.id}`)
+      let user=await axios.get(`${data.api}/user/${params.id}`)
       formik.setValues({
       
         name:user.data.name,
