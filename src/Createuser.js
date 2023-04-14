@@ -32,7 +32,7 @@ function Createuser() {
 
     },
     onSubmit : async(values)=>{
-     let user=await  axios.post(`{${env.api}`,values)
+     let user=await  axios.post(`{${env.api}/create-user`,values)
       alert("User created")
       navigate('/')
     }

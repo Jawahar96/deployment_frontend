@@ -14,7 +14,7 @@ useEffect(()=>{
 
 let loadData=async()=>{
     setLoading(true)
-let users= await axios.get(`${env.api}/user` );
+let users= await axios.get(`${env.api}/getuser` );
     setUsers(users.data)
     setLoading(false)
 }
@@ -23,7 +23,7 @@ let userDelete=async (id)=>{
     try{
         let ask=window.confirm("Are you sure you want delete it");
         if(ask){
-            await axios.delete(`${env.api}/user/${id}`)
+            await axios.delete(`${env.api}/userdelete/  ${id}`)
             
             loadData()
 

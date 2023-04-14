@@ -33,7 +33,7 @@ function Edituser() {
 
     },
     onSubmit : async (values)=>{
-      let users=await axios.put(`${env.api}/user/${params.id}`,values);
+      let users=await axios.put(`${env.api}/user/ ${params.id}`,values);
  navigate('/user')
       console.log(values);
 
@@ -47,7 +47,7 @@ function Edituser() {
 
   let loadUser=async()=>{
     try{
-      let user=await axios.get(`${env.api}/user/${params.id}`)
+      let user=await axios.get(`${env.api}/user/ ${params.id}`)
       formik.setValues({
       
         name:user.data.name,
