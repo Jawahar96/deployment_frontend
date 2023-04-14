@@ -25,7 +25,7 @@ function App() {
 <Routes>
 <Route path='/login' element={<Login/>}/>
   <Route path='/dashboard' element={<Dashboard/>}/>
-  <Route path='/user' element={<User/>}/>
+  <Route path='/users' element={<User/>}/>
   <Route path='/create-user' element={<Createuser/>}/>
   <Route path='/user/user:id' element={<Userview/>}/>
   <Route path='/users/edit/:id' element={<Edituser/>}/>

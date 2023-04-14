@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="sidebar-brand-icon rotate-n-15">
         <i className="fas fa-laugh-wink"></i>
     </div>
-    <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup>
+    <div className="sidebar-brand-text mx-3">DEPLOYEMENT FOR FULL STACK DEVELOPMENT 
  
     </div>
 </a>
@@ -31,7 +31,7 @@ const Sidebar = () => {
 
 <li className="nav-item active">
 
-    <Link className="nav-link" to="/user">
+    <Link className="nav-link" to="/users">
         <i className="fas fa-fw fa-tachometer-alt"></i>
         <span>User</span>
         </Link>

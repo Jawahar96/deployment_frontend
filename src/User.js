@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { data } from './config'
+import { env } from './config'
 
 function User() {
     const [users,setUsers]=useState([])
@@ -14,7 +14,7 @@ useEffect(()=>{
 
 let loadData=async()=>{
     setLoading(true)
-let users= await axios.get(`${data.api}/user` );
+let users= await axios.get(`${env.api}/user` );
     setUsers(users.data)
     setLoading(false)
 }
@@ -23,7 +23,7 @@ let userDelete=async (id)=>{
     try{
         let ask=window.confirm("Are you sure you want delete it");
         if(ask){
-            await axios.delete(`${data.api}/user/${id}`)
+            await axios.delete(`${env.api}/user/${id}`)
             
             loadData()
 
