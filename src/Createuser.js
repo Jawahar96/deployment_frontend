@@ -12,7 +12,7 @@ function Createuser() {
       Position :"",
       Office :"",
       Age : "",
-      Startdate : "",
+      Startdate :"",
       Salary :"",
       Company : ""
 
@@ -87,7 +87,7 @@ function Createuser() {
           <input className='form-control' type={'text'}
             value={formik.values.Office}
             onChange={formik.handleChange}
-            name='office'
+            name='Office'
 
           />
 
@@ -101,7 +101,7 @@ function Createuser() {
           <input className='form-control' type={'date'} 
           value={formik.values.Startdate}
           onChange={formik.handleChange} 
-          name='Start date'
+          name='Startdate'
      
 
           />
