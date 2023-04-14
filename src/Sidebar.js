@@ -31,7 +31,7 @@ const Sidebar = () => {
 
 <li className="nav-item active">
 
-    <Link className="nav-link" to="/users">
+    <Link className="nav-link" to="/user">
         <i className="fas fa-fw fa-tachometer-alt"></i>
         <span>User</span>
         </Link>
