@@ -21,7 +21,7 @@ let users= await axios.get(`${env.api}/getuser` );
 
 let userDelete=async (id)=>{
     try{
-        let ask=window.confirm("Are you sure you want delete it");
+        let ask=window.confirm("Are you sure you want to  delete it");
         if(ask){
             await axios.delete(`${env.api}/userdelete/  ${id}`)
             
