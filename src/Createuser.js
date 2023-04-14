@@ -25,7 +25,7 @@ function Createuser() {
      }
 
      if(values.Position=""){
-      errors.Position="Enter valid position"
+      errors.Position="Enter correct position"
      }
 
      return errors;
