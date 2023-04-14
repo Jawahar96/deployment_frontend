@@ -73,7 +73,7 @@ function Createuser() {
         <div className='row'>
         <div className='col-lg-6'>
           <label>Age</label>
-          <input className='form-control' type={'text'} 
+          <input className='form-control' type={'number'} 
           value={formik.values.Age}
           onChange={formik.handleChange} 
             name='Age' />
@@ -98,7 +98,7 @@ function Createuser() {
         <div className='row'>
         <div className='col-lg-6'>
           <label>Start date</label>
-          <input className='form-control' type={'text'} 
+          <input className='form-control' type={'date'} 
           value={formik.values.Startdate}
           onChange={formik.handleChange} 
           name='Start date'
