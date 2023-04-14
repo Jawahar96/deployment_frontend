@@ -23,7 +23,7 @@ let userDelete=async (id)=>{
     try{
         let ask=window.confirm("Are you sure you want to  delete it");
         if(ask){
-            await axios.delete(`${env.api}/userdelete/  ${id}`)
+            await axios.delete(`${env.api}/userdelete/${id}`)
             
             loadData()
 

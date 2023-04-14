@@ -18,7 +18,7 @@ loadUser()
 let loadUser= async() =>{
   try{
 
-   let user= await axios.get(`${env.api}/user/ ${params.id}}`)
+   let user= await axios.get(`${env.api}/user/${params.id}}`)
    setSetData(user.data)
   }catch(error){
 
