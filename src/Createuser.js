@@ -1,4 +1,4 @@
-import { Formik, useFormik } from 'formik'
+import { formik, useFormik } from 'formik'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 import { env } from './config';
