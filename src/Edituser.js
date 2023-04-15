@@ -34,6 +34,7 @@ function Edituser() {
     },
     onSubmit : async (values)=>{
       let users=await axios.put(`${env.api}/user/${params.id}`,values);
+      console.log(users);
  navigate('/user')
       console.log(values);
 
