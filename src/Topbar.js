@@ -184,7 +184,7 @@ function Topbar() {
 
         <Link className="nav-link dropdown-toggle" to={"/profile"} id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span   className="mr-2 d-none d-lg-inline text-gray-600 small">Doughtet </span>
+            <span onClick={logout} className="mr-2 d-none d-lg-inline text-gray-600 small">Doughtet </span>
             <img className="img-profile rounded-circle"
                 src="img/undraw_profile.svg"/>
         </Link>

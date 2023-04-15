@@ -51,12 +51,12 @@ function Edituser() {
       formik.setValues({
       
         name:user.data.name,
-        Position:user.data.position,
-        Office:user.data.office,
-        Age:user.data.age,
-         Startdate:user.data.startdate,
-        Salary:user.data.salary,
-        Company:user.data.company
+        Position:user.data.Position,
+        Office:user.data.Office,
+        Age:user.data.Age,
+         Startdate:user.data.Startdate,
+        Salary:user.data.Salary,
+        Company:user.data.Company
       })
     }catch(error){
 
@@ -110,7 +110,7 @@ function Edituser() {
           <input className='form-control' type={'text'}
             value={formik.values.Office}
             onChange={formik.handleChange}
-            name='office'
+            name='Office'
 
           />
 

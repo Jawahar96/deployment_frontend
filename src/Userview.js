@@ -4,27 +4,28 @@ import { useParams, useSearchParams } from 'react-router-dom'
 import { env } from './config';
 
 function Userview() {
-    const params=useParams()
-    console.log(params);
-const [searchparams,setSearchParams]=useSearchParams()
-console.log(...searchparams);
+  const params = useParams()
+  console.log(params);
+  const [searchparams, setSearchParams] = useSearchParams()
+  console.log(...searchparams);
 
-const [userData,setSetData]=useState({})
+  const [userData, setSetData] = useState({})
 
-useEffect(()=>{
-loadUser()
-},[])
+  useEffect(() => {
+    loadUser()
+  }, [])
 
-let loadUser= async() =>{
-  try{
+  let loadUser = async () => {
+    try {
 
-   let user= await axios.get(`${env.api}/user/${params.id}}`)
-   setSetData(user.data)
-  }catch(error){
+      let user = await axios.get(`${env.api}/user/${params.id}`)
+      setSetData(user.data)
+    } catch (error) {
 
-}}
+    }
+  }
 
-  
+
   return (
 
     <div>
@@ -35,7 +36,7 @@ let loadUser= async() =>{
       <h2>{userData.startdate}</h2>
       <h2>{userData.salary}</h2>
       <h2>{userData.company}</h2>
-      </div>
+    </div>
   )
 }
 

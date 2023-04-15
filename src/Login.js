@@ -4,9 +4,9 @@ import { Link, useNavigate } from 'react-router-dom'
 function Login() {
     const navigate=useNavigate()
     const username="Jawahar"
-    const password="12345"
+    // const password="12345"
 let login=()=>{
-if(username == "Jawahar" && password == "12345"){
+if(username == "Jawahar" ){
 
     navigate('/dashboard')
 }

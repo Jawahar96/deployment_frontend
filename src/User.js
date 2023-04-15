@@ -24,12 +24,13 @@ let userDelete=async (id)=>{
         let ask=window.confirm("Are you sure you want to  delete it");
         if(ask){
             await axios.delete(`${env.api}/userdelete/${id}`)
-            
+            // users.slice(users.id)
             loadData()
 
         }
         
     }catch(error){
+        console.log(error);
 
     }
 }
@@ -85,7 +86,7 @@ let userDelete=async (id)=>{
                             <td>{index + 1}</td>
                             <td>{user.name}</td>
                             <td>{user.position}</td>
-                            <td>{user.office}</td>
+                            <td>{user.Office}</td>
                             <td>{user.Age}</td>
                             <td>{user.Startdate}
                             </td>
